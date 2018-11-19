@@ -9,13 +9,13 @@ public class Sensor {
     @GeneratedValue
     private long id;
     @Column(nullable = false,length = 255)
-    private float temp;
+    private String temp;
     @Column(nullable = false,length = 255)
-    private float hum;
+    private String hum;
 
     public void sensor(){}
 
-    public void sensor(float temp,float hum){
+    public void sensor(String temp,String hum){
         this.temp = temp;
         this.hum = hum;
     }
@@ -24,19 +24,19 @@ public class Sensor {
         return id;
     }
 
-    public float gettemp(){
+    public String gettemp(){
         return temp;
     }
 
-    public void settemp(float temp){
+    public void settemp(String temp){
         this.temp = temp;
     }
 
-    public float getHum(){
+    public String getHum(){
         return hum;
     }
 
-    public void setHum(float hum){
+    public void setHum(String hum){
         this.hum = hum;
     }
 }
